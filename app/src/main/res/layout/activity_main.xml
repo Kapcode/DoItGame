@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/livestv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:paddingEnd="10dp"
+        android:text="2"
+        android:textColor="#EA2929"
+        android:textSize="34sp" />
+
+    <Button
+        android:id="@+id/start"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/instruction"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="-2dp"
+        android:layout_marginBottom="3dp"
+        android:text="Start"
+        android:textSize="80sp" />
+
+    <ImageView
+        android:id="@+id/scoreImage"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:foreground="@drawable/points" />
+
+    <ImageView
+        android:id="@+id/playImageView"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_above="@id/instruction"
+        android:layout_centerHorizontal="true"
+        android:scaleType="fitXY"
+        app:srcCompat="@color/design_default_color_on_secondary" />
+
+    <ImageView
+        android:id="@+id/livesImage"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_toStartOf="@id/livestv"
+        android:foreground="@drawable/life"
+        android:scaleType="fitXY"
+        app:srcCompat="@drawable/block" />
+
+    <TextView
+        android:id="@+id/scoretv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/scoreImage"
+        android:text="000"
+        android:textColor="#DADDF3"
+        android:textSize="26sp" />
+
+    <LinearLayout
+        android:id="@+id/playArea"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/instruction"
+        android:orientation="horizontal">
+
+        <Switch
+            android:id="@+id/switch2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:minHeight="48dp"
+            android:text="Switch" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/instruction"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="#4DFFFF8A"
+        android:text="@string/tap_it"
+        android:textAlignment="center"
+        android:textSize="34sp" />
+
+</RelativeLayout>
